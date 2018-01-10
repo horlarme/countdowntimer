@@ -22,8 +22,6 @@ Start coundown with ease using this javascript file.
     <p>Minutes <span cdt-minutes></span></p>
     <p>Seconds: <span cdt-seconds></span></p>
 ```
-Note that month should start with 0 and not 1.
-This means January is 0 and February is 1 making December 11
 
 - Start the countdown
 ```html
