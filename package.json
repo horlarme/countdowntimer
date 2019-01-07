@@ -1,0 +1,9 @@
+{
+  "name": "countdowntimer",
+  "version": "1.0.0",
+  "description": "Start a countdown timer with ease.",
+  "main": "index.js",
+  "repository": "git@github.com:horlarme/countdowntimer.git",
+  "author": "Lawal Oladipupo <lawaloladipupo@outlook.com>",
+  "license": "MIT"
+}
