@@ -1,9 +1,29 @@
 {
-  "name": "countdowntimer",
+  "name": "@horlarme/countdowntimer",
   "version": "1.0.0",
   "description": "Start a countdown timer with ease.",
   "main": "index.js",
-  "repository": "git@github.com:horlarme/countdowntimer.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/horlarme/countdowntimer.git"
+  },
   "author": "Lawal Oladipupo <lawaloladipupo@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/horlarme/countdowntimer/issues"
+  },
+  "homepage": "https://github.com/horlarme/countdowntimer#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "countdowntimer",
+    "timer",
+    "countdown",
+    "date",
+    "coming",
+    "soon"
+  ]
 }
