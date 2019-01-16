@@ -118,7 +118,17 @@
         var days = Math.floor(difference_ms / 24) > 0 ? Math.floor(difference_ms / 24) : 0;
 
         countdowntimer.shouldStopTimer = (difference_ms <= 0 ? true : false);
-        console.log(countdowntimer.shouldStopTimer);
+
+
+        if (countdowntimer.shouldStopTimer) {
+
+            /**
+             * Calling the callback specified by the user if any
+             */
+            if (countdowntimer.callback != null) {
+                countdowntimer.callback();
+            }
+        }
 
         return {
             days: (days < 10 ? "0" + days : days),
@@ -129,12 +139,23 @@
     };
 
     /**
+     * Setting callback function
+     *
+     * @param callable function
+     */
+    countdowntimer.onFinish = function (callable) {
+        countdowntimer.callback = callable;
+    }
+
+    /**
      * Start the countdown
      */
     countdowntimer.start = function () {
         var start = setInterval(function () {
                 if (countdowntimer.shouldStopTimer) {
+
                     clearInterval(start);
+
                 } else {
                     countdowntimer.updateDOM();
                 }
@@ -154,6 +175,11 @@
         daysElement: "[cdt-days]",
         debug: true
     };
+
+    /**
+     * A callback function for when time counted down
+     */
+    countdowntimer.callback = null;
 
     /**
      * Initializer
