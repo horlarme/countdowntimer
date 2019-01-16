@@ -1,6 +1,6 @@
 {
   "name": "@horlarme/countdowntimer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Start a countdown timer with ease.",
   "main": "index.js",
   "repository": {
