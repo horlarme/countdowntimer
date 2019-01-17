@@ -194,6 +194,12 @@
 
             if (!countdowntimer.config.hasOwnProperty(key)) continue;
 
+            //Replacing "-" in time string with "/"
+            if(key == 'to'){
+                countdowntimer.config[key] = config[key].replace(/-/g, "/")
+                continue
+            }
+
             countdowntimer.config[key] = config[key]
         }
         countdowntimer.shouldStopTimer = false;
