@@ -195,9 +195,13 @@
             if (!countdowntimer.config.hasOwnProperty(key)) continue;
 
             //Replacing "-" in time string with "/"
-            if(key == 'to'){
-                countdowntimer.config[key] = config[key].replace(/-/g, "/")
-                continue
+            if (key == 'to') {
+                try {
+                    countdowntimer.config[key] = new Date(config[key].replace(/-/g, "/"))
+                } catch (e) {
+                    countdowntimer.config[key] = config[key]
+
+                }
             }
 
             countdowntimer.config[key] = config[key]
